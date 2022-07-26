@@ -50,9 +50,13 @@ class TodoListState extends State<TodoList> {
   // }
 
   Widget _buildTodoItem(String todoText, int indexno) {
-    return ListTile(
-      title: Text(todoText),
-      onTap: () => _promptRemoveTodoItem(indexno),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ListTile(
+        tileColor: Colors.blue,
+        title: Text(todoText),
+        onTap: () => _promptRemoveTodoItem(indexno),
+      ),
     );
   }
 
